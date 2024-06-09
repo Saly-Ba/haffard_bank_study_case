@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "Novu": "0.3.3",
           "Pomelo.EntityFrameworkCore.MySql": "8.0.2",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
@@ -1532,6 +1533,20 @@
           }
         }
       },
+      "Novu/0.3.3": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0",
+          "Refit.Newtonsoft.Json": "7.0.0",
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Novu.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "NuGet.Common/6.9.1": {
         "dependencies": {
           "NuGet.Frameworks": "6.9.1"
@@ -1644,6 +1659,30 @@
           }
         }
       },
+      "Refit/7.0.0": {
+        "dependencies": {
+          "System.Net.Http.Json": "7.0.1",
+          "System.Text.Json": "8.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Refit.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.12"
+          }
+        }
+      },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.12"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.4.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -1691,6 +1730,7 @@
         }
       },
       "System.Collections.Immutable/7.0.0": {},
+      "System.ComponentModel.Annotations/5.0.0": {},
       "System.Composition/7.0.0": {
         "dependencies": {
           "System.Composition.AttributedModel": "7.0.0",
@@ -1821,6 +1861,11 @@
             "assemblyVersion": "1.0.2.0",
             "fileVersion": "1.0.221.20802"
           }
+        }
+      },
+      "System.Net.Http.Json/7.0.1": {
+        "dependencies": {
+          "System.Text.Json": "8.0.0"
         }
       },
       "System.Numerics.Vectors/4.5.0": {},
@@ -2764,6 +2809,13 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
+    "Novu/0.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YzN+LK9NhG2LF4TEY1104pMkhW1hgpUyQSy2GGG2RQrlfNbbEytg8wGFIngC3772GVl5rqCW0LwrhAKdMH/00Q==",
+      "path": "novu/0.3.3",
+      "hashPath": "novu.0.3.3.nupkg.sha512"
+    },
     "NuGet.Common/6.9.1": {
       "type": "package",
       "serviceable": true,
@@ -2834,6 +2886,20 @@
       "path": "pomelo.entityframeworkcore.mysql/8.0.2",
       "hashPath": "pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512"
     },
+    "Refit/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MeOXucNjebiLiOM+hM4niN2cWLlwaQWNCGZs0LDUEoCVwOtV/IWOMOqlAbUeb8Y0/iOgMai2g6Gz9M/d6V7gtA==",
+      "path": "refit/7.0.0",
+      "hashPath": "refit.7.0.0.nupkg.sha512"
+    },
+    "Refit.Newtonsoft.Json/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wyF5v8palQYkbkRn/cDSAvDulZjY5kL2XQUD76nSbcAwqUnMaRRuEPJt3njR0+dPoABuV8RYqSvYDce8+enJ2g==",
+      "path": "refit.newtonsoft.json/7.0.0",
+      "hashPath": "refit.newtonsoft.json.7.0.0.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",
       "serviceable": true,
@@ -2875,6 +2941,13 @@
       "sha512": "sha512-dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
       "path": "system.collections.immutable/7.0.0",
       "hashPath": "system.collections.immutable.7.0.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+      "path": "system.componentmodel.annotations/5.0.0",
+      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
     "System.Composition/7.0.0": {
       "type": "package",
@@ -2994,6 +3067,13 @@
       "sha512": "sha512-JGkzeqgBsiZwKJZ1IxPNsDFZDhUvuEdX8L8BDC8N3KOj+6zMcNU28CNN59TpZE/VJYy9cP+5M+sbxtWJx3/xtw==",
       "path": "system.memory.data/1.0.2",
       "hashPath": "system.memory.data.1.0.2.nupkg.sha512"
+    },
+    "System.Net.Http.Json/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ni8+BJnndbJI9AXme/qCYXg1s4RpdRJx3gKp5WzcWuLt4l3syuscgk5Becis6x4E7HbQk4z6A7FNXFQD75F+wQ==",
+      "path": "system.net.http.json/7.0.1",
+      "hashPath": "system.net.http.json.7.0.1.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",

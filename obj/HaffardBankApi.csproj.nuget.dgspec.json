@@ -67,6 +67,10 @@
               "target": "Package",
               "version": "[8.0.2, )"
             },
+            "Novu": {
+              "target": "Package",
+              "version": "[0.3.3, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.2, )"

@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HaffardBankApi.Data;
 using HaffardBankApi.Models;
+using HaffardBankApi.Services;
 
 namespace HaffardBankApi.Controllers
 {
@@ -15,10 +11,12 @@ namespace HaffardBankApi.Controllers
     public class ClientController : ControllerBase
     {
         private readonly HaffardDbContext _context;
+        private readonly IPinService _pinService;
 
-        public ClientController(HaffardDbContext context)
+        public ClientController(HaffardDbContext context, IPinService pinService)
         {
             _context = context;
+            _pinService = pinService;
         }
 
         // GET: api/Client
@@ -75,14 +73,21 @@ namespace HaffardBankApi.Controllers
 
         // // POST: api/Client
         // // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        // [HttpPost]
-        // public async Task<ActionResult<ClientModel>> PostClientModel(ClientModel clientModel)
-        // {
-        //     _context.Client.Add(clientModel);
-        //     await _context.SaveChangesAsync();
+        [HttpPost]
+        public async Task<ActionResult<ClientModel>> PostClientModel(ClientModel clientModel)
+        {
+            _context.Client.Add(clientModel);
+            await _context.SaveChangesAsync();
 
-        //     return CreatedAtAction("GetClientModel", new { id = clientModel.Id }, clientModel);
-        // }
+            string pin = _pinService.GeneratePin();
+
+            string encryptedPin = _pinService.EncryptPin(pin);
+
+            _context.Card.Add(new CardModel(encryptedPin, false, clientModel.Id ,clientModel));
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetClientModel", new { id = clientModel.Id}, clientModel);
+        }
 
         // // DELETE: api/Client/5
         // [HttpDelete("{id}")]
