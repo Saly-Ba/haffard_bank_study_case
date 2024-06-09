@@ -1,0 +1,6 @@
+@HaffardBankApi_HostAddress = http://localhost:5008
+
+GET {{HaffardBankApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
